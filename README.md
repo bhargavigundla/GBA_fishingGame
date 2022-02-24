@@ -20,4 +20,8 @@ Two-toned fish: DANGER
 
 Catching a Two-Toned Fish(TTF) will end the game! So try to avoid those, please.
 
-Also, try pressing the a button while playing! It makes the game a little more fun:)
+Also, try pressing the A button while playing! It makes the game a little more fun:)
+
+NOTE: Sometimes, you might die the second you start the game. 
+      This is because fishies randomely spawn on the screen, 
+      and sometimes the bad fishies spawn at the sme location as your fishing hook!
