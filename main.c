@@ -147,10 +147,8 @@ void game() {
 }
 
 void pause() {
-    if (BUTTON_PRESSED(BUTTON_SELECT)) {
+    if (BUTTON_PRESSED(BUTTON_START)) {
         goToGame();
-    } else if (BUTTON_PRESSED(BUTTON_START)) {
-        goToStart();
     }  
 }
 
@@ -172,7 +170,7 @@ void drawStartString() {
 }
 
 void drawPauseString() {
-    drawString(calculateCenter(6), 70, "paused", WHITE);
+    drawString(calculateCenter(29), 70, "paused, press start to resume", WHITE);
     printScore();  
 }
 

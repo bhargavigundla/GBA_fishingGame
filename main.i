@@ -1064,10 +1064,8 @@ void game() {
 }
 
 void pause() {
-    if ((!(~(oldButtons)&((1<<2))) && (~buttons & ((1<<2))))) {
+    if ((!(~(oldButtons)&((1<<3))) && (~buttons & ((1<<3))))) {
         goToGame();
-    } else if ((!(~(oldButtons)&((1<<3))) && (~buttons & ((1<<3))))) {
-        goToStart();
     }
 }
 
@@ -1089,7 +1087,7 @@ void drawStartString() {
 }
 
 void drawPauseString() {
-    drawString(calculateCenter(6), 70, "paused", ((31) | (31)<<5 | (31)<<10));
+    drawString(calculateCenter(29), 70, "paused, press start to resume", ((31) | (31)<<5 | (31)<<10));
     printScore();
 }
 
