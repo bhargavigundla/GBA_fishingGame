@@ -913,7 +913,7 @@ PLAYER hook;
 FISHIE fishies[8];
 int fishiesRemaining;
 int wait;
-int maxWait;
+int maxWait = 2;
 int score;
 
 u16 hookMap[5][5] = {

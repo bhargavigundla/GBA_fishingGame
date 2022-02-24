@@ -474,7 +474,7 @@ updateFish:
 	.align	2
 .L58:
 	.word	wait
-	.word	maxWait
+	.word	.LANCHOR0
 	.word	hook
 	.word	collision
 	.word	rand
@@ -529,7 +529,7 @@ updateGame:
 	.align	2
 .L73:
 	.word	wait
-	.word	maxWait
+	.word	.LANCHOR0
 	.word	fishies
 	.size	updateGame, .-updateGame
 	.align	2
@@ -554,7 +554,7 @@ drawFish:
 	.align	2
 .L77:
 	.word	wait
-	.word	maxWait
+	.word	.LANCHOR0
 	.size	drawFish, .-drawFish
 	.align	2
 	.global	swapDifficulty
@@ -580,7 +580,7 @@ swapDifficulty:
 .L83:
 	.align	2
 .L82:
-	.word	maxWait
+	.word	.LANCHOR0
 	.word	wait
 	.size	swapDifficulty, .-swapDifficulty
 	.align	2
@@ -601,7 +601,7 @@ enableEasyMode:
 .L86:
 	.align	2
 .L85:
-	.word	maxWait
+	.word	.LANCHOR0
 	.size	enableEasyMode, .-enableEasyMode
 	.align	2
 	.global	enableHardMode
@@ -621,7 +621,7 @@ enableHardMode:
 .L89:
 	.align	2
 .L88:
-	.word	maxWait
+	.word	.LANCHOR0
 	.size	enableHardMode, .-enableHardMode
 	.align	2
 	.global	drawFishingLine
@@ -728,7 +728,7 @@ drawHook:
 	.word	29522
 	.word	hook
 	.word	drawRect
-	.word	.LANCHOR0
+	.word	.LANCHOR0+4
 	.word	setPixel
 	.size	drawHook, .-drawHook
 	.align	2
@@ -770,18 +770,22 @@ drawGame:
 .L111:
 	.word	fishies
 	.word	wait
-	.word	maxWait
+	.word	.LANCHOR0
 	.size	drawGame, .-drawGame
 	.global	hookMap
 	.comm	score,4,4
 	.comm	fishiesRemaining,4,4
 	.comm	fishies,384,4
 	.comm	hook,40,4
-	.comm	maxWait,4,4
+	.global	maxWait
 	.comm	wait,4,4
 	.data
 	.align	2
 	.set	.LANCHOR0,. + 0
+	.type	maxWait, %object
+	.size	maxWait, 4
+maxWait:
+	.word	2
 	.type	hookMap, %object
 	.size	hookMap, 50
 hookMap:
