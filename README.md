@@ -25,3 +25,5 @@ Also, try pressing the A button while playing! It makes the game a little more f
 NOTE: Sometimes, you might die the second you start the game. 
       This is because fishies randomely spawn on the screen, 
       and sometimes the bad fishies spawn at the sme location as your fishing hook!
+
+Access my github repo: https://github.com/ydder7850/GBA_fishingGame
