@@ -15,7 +15,7 @@ When you inevitably lose(unless you wind up catching that 999th fish), press sta
 
 You control the fishing hook with the four arrow keys to move around and catch as many fish as you can!
 
-Solid fish: safe to catch
+Solid fish: SAFE, and increments score
 Two-toned fish: DANGER
 
 Catching a Two-Toned Fish(TTF) will end the game! So try to avoid those, please.
