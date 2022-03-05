@@ -21,6 +21,12 @@ typedef unsigned short u16;
 #define SCREENHEIGHT 160
 #define SCREENWIDTH 240
 
+// Sound Control Registers
+#define REG_SOUNDCNT_X *(volatile u16*)0x04000084
+#define SND_ENABLED (1<<7)
+#define REG_SOUNDCNT_L *(volatile u16*)0x04000080 
+#define REG_SOUNDCNT_H *(volatile u16*)0x04000082 // bits 0-1 are DMG sound volume. 00 => 25%, 01 => 50%, 10 => 100%
+
 // Video Buffer
 extern volatile unsigned short *videoBuffer;
 
