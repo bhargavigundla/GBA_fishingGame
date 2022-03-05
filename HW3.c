@@ -35,3 +35,4 @@ int collision(int colA, int rowA, int widthA, int heightA, int colB, int rowB, i
     && colA + widthA >= colB
     && colA <= colB + widthB;
 }
+
