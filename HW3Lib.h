@@ -21,6 +21,11 @@ typedef unsigned short u16;
 #define SCREENHEIGHT 160
 #define SCREENWIDTH 240
 
+// =================================== SOUND ====================================
+
+#define PROCESSOR_CYCLES_PER_SECOND (16777216)
+#define VBLANK_FREQ (59.727)
+
 // register definitions
 #define REG_SOUNDCNT_L        *(volatile u16*)0x04000080
 #define REG_SOUNDCNT_H        *(volatile u16*)0x04000082
@@ -35,6 +40,7 @@ typedef unsigned short u16;
 #define SND_OUTPUT_RATIO_100  (1<<1)
 
 // ============================== ANALOG SOUND ================================
+
 #define REG_SND1SWEEP     *(volatile u16*)0x04000060
 #define REG_SND1CNT       *(volatile u16*)0x04000062
 #define REG_SND1FREQ      *(volatile u16*)0x04000064

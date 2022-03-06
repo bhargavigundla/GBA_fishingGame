@@ -78,6 +78,23 @@ int main() {
 void initialize() {
 
     REG_DISPCTL = MODE3 | BG2_ENABLE;
+
+    // Sound Setup
+    REG_SOUNDCNT_X = SND_ENABLED; // Enable sound
+
+    REG_SOUNDCNT_L = DMG_VOL_LEFT(5) |
+                   DMG_VOL_RIGHT(5) |
+                   DMG_SND1_LEFT |
+                   DMG_SND1_RIGHT |
+                   DMG_SND2_LEFT |
+                   DMG_SND2_RIGHT |
+                   DMG_SND3_LEFT |
+                   DMG_SND3_RIGHT |
+                   DMG_SND4_LEFT |
+                   DMG_SND4_RIGHT;
+
+    REG_SOUNDCNT_H = DMG_MASTER_VOL(2);
+    
     goToStart();
 }
 

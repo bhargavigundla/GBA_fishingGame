@@ -135,6 +135,8 @@ int updateFish(FISHIE* b) {
 		// collision detection
 		if (collision(b->col, b->row, b->width, b->height, 
 		    hook.col, hook.row, hook.width, hook.height)) {
+			REG_SND2CNT = DMG_ENV_VOL(15) | DMG_DIRECTION_DECR | DMG_STEP_TIME(7) | DMG_DUTY_50;
+    		REG_SND2FREQ = NOTE_A7 | SND_RESET | DMG_FREQ_TIMED;
 			if (b->evil) {
 				return 1; // return game is over
 			} else {
